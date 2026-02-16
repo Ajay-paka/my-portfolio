@@ -38,7 +38,7 @@ function App() {
           </h1>
 
           <p className="text-gray-400 text-lg md:text-xl mb-8">
-            Full Stack Developer | Python | React
+            Software Developer | Python | React
           </p>
 
           <div className="flex justify-center gap-6">
