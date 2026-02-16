@@ -80,6 +80,70 @@ function App() {
         </motion.div>
       </div>
 
+      {/* SKILLS SECTION */}
+      <div className="py-24 px-6 bg-[#0f172a]">
+
+        <motion.h2
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-4xl font-bold text-center mb-16"
+        >
+          My <span className="text-cyan-400">Skills</span>
+        </motion.h2>
+
+        <div className="max-w-5xl mx-auto space-y-12">
+
+          {/* Frontend */}
+          <div>
+            <h3 className="text-2xl font-semibold mb-6 text-cyan-400">Frontend</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {["HTML", "CSS", "Tailwind CSS", "React"].map((skill, i) => (
+                <div
+                  key={i}
+                  className="bg-[#1e293b] p-4 rounded-lg text-center hover:scale-105 hover:shadow-lg hover:shadow-cyan-400/40 transition duration-300"
+                >
+                  {skill}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Backend */}
+          <div>
+            <h3 className="text-2xl font-semibold mb-6 text-purple-400">Backend</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {["Python", "REST APIs", "PostgreSQL"].map((skill, i) => (
+                <div
+                  key={i}
+                  className="bg-[#1e293b] p-4 rounded-lg text-center hover:scale-105 hover:shadow-lg hover:shadow-purple-400/40 transition duration-300"
+                >
+                  {skill}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Design */}
+          <div>
+            <h3 className="text-2xl font-semibold mb-6 text-cyan-400">Design</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {["UI/UX Fundamentals", "Responsive Design"].map((skill, i) => (
+                <div
+                  key={i}
+                  className="bg-[#1e293b] p-4 rounded-lg text-center hover:scale-105 hover:shadow-lg hover:shadow-cyan-400/40 transition duration-300"
+                >
+                  {skill}
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
       {/* PROJECTS SECTION */}
       <div id="projects" className="py-24 px-6">
 
