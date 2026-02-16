@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 
 function App() {
   return (
@@ -38,8 +39,24 @@ function App() {
           </h1>
 
           <p className="text-gray-400 text-lg md:text-xl mb-8">
-            Software Developer | Python | React
+            <span className="text-cyan-400 font-semibold">
+              <Typewriter
+                words={[
+                  "Software Developer",
+                  "React Developer",
+                  "Python Developer",
+                  "Full Stack Enthusiast"
+                ]}
+                loop={true}
+                cursor
+                cursorStyle="|"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1500}
+              />
+            </span>
           </p>
+
 
           <div className="flex justify-center gap-6">
 
