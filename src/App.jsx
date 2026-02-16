@@ -8,7 +8,7 @@ function App() {
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
           <h1 className="text-xl font-bold text-cyan-400">
-            Ajay.dev
+            Ajay Paka
           </h1>
 
           <div className="flex gap-6 text-gray-300">
