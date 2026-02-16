@@ -50,8 +50,8 @@ function App() {
                 loop={true}
                 cursor
                 cursorStyle="|"
-                typeSpeed={70}
-                deleteSpeed={50}
+                typeSpeed={50}
+                deleteSpeed={30}
                 delaySpeed={1500}
               />
             </span>
