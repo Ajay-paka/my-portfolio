@@ -14,6 +14,7 @@ function App() {
 
           <div className="flex gap-6 text-gray-300">
             <a href="#home" className="hover:text-cyan-400 transition">Home</a>
+            <a href="#about" className="hover:text-cyan-400 transition">About</a>
             <a href="#projects" className="hover:text-cyan-400 transition">Projects</a>
             <a href="#contact" className="hover:text-cyan-400 transition">Contact</a>
           </div>
@@ -79,6 +80,33 @@ function App() {
 
         </motion.div>
       </div>
+      {/* ABOUT SECTION */}
+      <div id="about" className="py-24 px-6 bg-[#0f172a]">
+
+        <motion.h2
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-4xl font-bold text-center mb-12"
+        >
+          About <span className="text-cyan-400">Me</span>
+        </motion.h2>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto text-center text-gray-400 leading-relaxed text-lg"
+        >
+          I am a passionate Software Developer focused on building modern,
+          responsive, and scalable web applications using React and Python.
+          I enjoy solving real-world problems and continuously improving my
+          development skills through hands-on projects and deployments.
+        </motion.div>
+
+      </div>
 
       {/* SKILLS SECTION */}
       <div className="py-24 px-6 bg-[#0f172a]">
@@ -102,7 +130,7 @@ function App() {
               {["HTML", "CSS", "Tailwind CSS", "React"].map((skill, i) => (
                 <div
                   key={i}
-                  className="bg-[#1e293b] p-4 rounded-lg text-center hover:scale-105 hover:shadow-lg hover:shadow-cyan-400/40 transition duration-300"
+                  className="bg-[#1e293b] p-4 rounded-lg text-center hover:scale-105 hover:shadow-lg hover:shadow-[0_0_30px_#22d3ee] hover:shadow-cyan-400/40 transition duration-300"
                 >
                   {skill}
                 </div>
@@ -117,7 +145,7 @@ function App() {
               {["Python", "REST APIs", "PostgreSQL"].map((skill, i) => (
                 <div
                   key={i}
-                  className="bg-[#1e293b] p-4 rounded-lg text-center hover:scale-105 hover:shadow-lg hover:shadow-purple-400/40 transition duration-300"
+                  className="bg-[#1e293b] p-4 rounded-lg text-center hover:scale-105 hover:shadow-lg hover:shadow-[0_0_30px_#22d3ee] hover:shadow-purple-400/40 transition duration-300"
                 >
                   {skill}
                 </div>
@@ -132,7 +160,7 @@ function App() {
               {["UI/UX Fundamentals", "Responsive Design"].map((skill, i) => (
                 <div
                   key={i}
-                  className="bg-[#1e293b] p-4 rounded-lg text-center hover:scale-105 hover:shadow-lg hover:shadow-cyan-400/40 transition duration-300"
+                  className="bg-[#1e293b] p-4 rounded-lg text-center hover:scale-105 hover:shadow-lg hover:shadow-[0_0_30px_#22d3ee] hover:shadow-cyan-400/40 transition duration-300"
                 >
                   {skill}
                 </div>
