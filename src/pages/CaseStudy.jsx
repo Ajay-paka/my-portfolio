@@ -26,35 +26,30 @@ function CaseStudy() {
                 ← Back
             </Link>
 
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-6xl mx-auto">
 
                 {/* HERO */}
                 <div className="mb-16 text-center">
-                    <h1 className="text-5xl font-bold mb-6 text-cyan-400">
+                    <h1 className="text-5xl font-bold mb-7 text-cyan-400">
                         {project.title}
                     </h1>
 
-                    <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+                    <p className="text-gray-400 mb-15 text-lg max-w-1xl mx-auto">
                         {project.description}
                     </p>
-                </div>
 
-                {/* Tech Stack */}
-                <div className="mb-16">
-                    <h2 className="text-2xl font-semibold mb-6 text-purple-400">
-                        Tech Stack
-                    </h2>
-
-                    <div className="flex flex-wrap gap-4">
-                        {project.tech.map((tech, i) => (
+                    <div className="flex flex-wrap justify-center gap-5 mt-6">
+                        {project.tech?.map((tech, i) => (
                             <span
                                 key={i}
-                                className="px-4 py-2 bg-[#1e293b] rounded-full text-sm"
+                                /*className="px-4 py-2 bg-[#1e293b] rounded-full text-sm text-cyan-400"*/
+                                className="bg-[#1e293b] p-3 rounded-2xl text-cyan-400 text-center hover:scale-105 hover:shadow-lg hover:shadow-cyan-400/30 transition duration-300"
                             >
                                 {tech}
                             </span>
                         ))}
                     </div>
+
                 </div>
 
                 {/* Problem */}
@@ -67,28 +62,75 @@ function CaseStudy() {
                     </p>
                 </div>
 
-                {/* Solution */}
-                <div className="mb-16">
-                    <h2 className="text-3xl font-semibold mb-4 text-purple-400">
-                        The Solution
-                    </h2>
-                    <p className="text-gray-400 leading-relaxed">
-                        {project.solution}
-                    </p>
-                </div>
-
-                {/* Impact */}
+                {/* Features */}
                 <div className="mb-16">
                     <h2 className="text-3xl font-semibold mb-4 text-cyan-400">
-                        Impact
+                        Features Implemented
                     </h2>
-                    <p className="text-gray-400 leading-relaxed">
-                        {project.impact}
-                    </p>
+                    <ul className="list-disc pl-6 text-gray-400 space-y-2">
+                        {project.features?.map((item, i) => (
+                            <li key={i}>{item}</li>
+                        ))}
+                    </ul>
+                </div>
+
+                {/* Technical Implementation */}
+                <div className="mb-16">
+                    <h2 className="text-3xl font-semibold mb-4 text-purple-400">
+                        Technical Implementation
+                    </h2>
+                    <ul className="list-disc pl-6 text-gray-400 space-y-2">
+                        {project.implementation?.map((item, i) => (
+                            <li key={i}>{item}</li>
+                        ))}
+                    </ul>
+                </div>
+
+                {/* Challenges */}
+                <div className="mb-16">
+                    <h2 className="text-3xl font-semibold mb-4 text-red-400">
+                        Challenges Faced
+                    </h2>
+                    <ul className="list-disc pl-6 text-gray-400 space-y-2">
+                        {project.challenges?.map((item, i) => (
+                            <li key={i}>{item}</li>
+                        ))}
+                    </ul>
+                </div>
+
+
+                {/* What I Learned */}
+                <div className="mb-16">
+                    <h2 className="text-3xl font-semibold mb-4 text-cyan-400">
+                        What I Learned
+                    </h2>
+                    <ul className="list-disc pl-6 text-gray-400 space-y-2">
+                        {project.learned?.map((item, i) => (
+                            <li key={i}>{item}</li>
+                        ))}
+                    </ul>
+                </div>
+
+                {/* skills strengthened */}
+                <div className="mt-16">
+                    <h2 className="text-3xl font-semibold mb-4 text-purple-400">
+                        Skills Strengthened
+                    </h2>
+
+                    <div className="flex flex-wrap gap-5">
+                        {project.skills?.map((skill, i) => (
+                            <span
+                                key={i}
+                                className="bg-[#1e293b] p-4 rounded-2xl text-purple-400 text-center hover:scale-105 hover:shadow-lg hover:shadow-[0_0_30px_#22d3ee] hover:shadow-purple-400/40 transition duration-300" >
+
+                                {skill}
+                            </span>
+                        ))}
+                    </div>
                 </div>
 
                 {/* Buttons */}
-                <div className="flex gap-6 mt-10">
+                <div className="flex gap-7 mt-12">
                     {project.github && (
                         <a
                             href={project.github}
@@ -119,59 +161,65 @@ function CaseStudy() {
                     )}
                 </div>
 
-            </div>
-            {/* Metrics */}
-            <div className="mb-20">
-                <h2 className="text-3xl font-semibold mb-10 text-purple-400">
-                    Key Highlights
-                </h2>
 
-                <div className="grid md:grid-cols-3 gap-8">
-                    {project.metrics?.map((item, i) => (
-                        <div
-                            key={i}
-                            className="bg-[#1e293b] p-8 rounded-2xl text-center hover:scale-105 transition"
-                        >
-                            <h3 className="text-3xl font-bold text-cyan-400 mb-2">
-                                {item.value}
-                            </h3>
-                            <p className="text-gray-400">{item.label}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
-            {/* Screenshots */}
-            {project.screenshots && (
-                <div className="mb-20">
-                    <h2 className="text-3xl font-semibold mb-10 text-cyan-400">
-                        Screenshots
-                    </h2>
 
-                    <div className="grid md:grid-cols-2 gap-10">
-                        {project.screenshots.map((item, i) => (
-                            <div key={i} className="space-y-4">
+                {/* Screenshots */}
+                {project.screenshots && (
+                    <div className=" mt-8 mb-20">
+                        <h2 className="text-3xl font-semibold mb-10 text-cyan-400">
+                            Screenshots
+                        </h2>
 
-                                {/* Caption Top (optional) */}
-                                {/* <p className="text-gray-400 text-sm">
+                        <div className="grid md:grid-cols-2 gap-10">
+                            {project.screenshots.map((item, i) => (
+                                <div key={i} className="space-y-4">
+
+                                    {/* Caption Top (optional) */}
+                                    {/* <p className="text-gray-400 text-sm">
             {item.caption}
           </p> */}
 
-                                <img
-                                    src={item.image}
-                                    alt="Project Screenshot"
-                                    className="rounded-2xl shadow-lg hover:scale-105 transition duration-300"
-                                />
+                                    <img
+                                        src={item.image}
+                                        alt="Project Screenshot"
+                                        className="rounded-2xl shadow-lg hover:scale-105 transition duration-300"
+                                    />
 
-                                {/* Caption Bottom */}
-                                <p className="text-gray-500 text-sm text-center italic">
-                                    {item.caption}
-                                </p>
+                                    {/* Caption Bottom */}
+                                    <p className="text-gray-500 text-sm text-center italic">
+                                        {item.caption}
+                                    </p>
 
-                            </div>
-                        ))}
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                </div>
-            )}
+                )}
+
+                {/* Metrics */}
+                {project.metrics && (
+                    <div className="mb-20">
+                        <h2 className="text-4xl font-semibold mb-10 text-purple-400">
+                            Project Metrics
+                        </h2>
+
+                        <div className="grid md:grid-cols-4 max-h-3xl gap-5">
+                            {project.metrics.map((item, i) => (
+                                <div
+                                    key={i}
+                                    className="bg-[#1e293b] p-8 rounded-2xl text-center hover:scale-105 hover:shadow-lg hover:shadow-cyan-400/30 transition duration-300"
+                                >
+                                    <h3 className="text-3xl font-bold text-cyan-400 mb-2">
+                                        {item.value}
+                                    </h3>
+                                    <p className="text-gray-400">{item.label}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
+            </div>
+
 
         </motion.div>
     );

@@ -138,7 +138,7 @@ function Home() {
                             to="/projects/fresho-career"
                             className="px-4 py-2 bg-cyan-400 text-black rounded-lg text-sm font-semibold"
                         >
-                            View Case Study →
+                            project overview 👁
                         </Link>
                     </div>
 
@@ -154,7 +154,7 @@ function Home() {
                             to="/projects/expense-tracker"
                             className="px-4 py-2 bg-purple-400 text-black rounded-lg text-sm font-semibold"
                         >
-                            View Case Study →
+                            project overview 👁
                         </Link>
                     </div>
 
