@@ -6,7 +6,7 @@ export const projects = [
         slug: "fresho-career",
         title: "Fresho Career Job Board",
         description:
-            "A full-stack job board platform built to help freshers find entry-level jobs.",
+            "Fresho Careers is a full-stack job portal built to simplify the hiring process for both job seekers and recruiters.",
         tech: [
             "React",
             "React Router",
@@ -18,9 +18,13 @@ export const projects = [
             "Git & GitHub"
         ],
 
-        problem:
-            "Freshers struggle to find verified and structured job listings.",
-
+        Overview: [
+            "Job seekers can discover opportunities in an organized and accessible way, while startups and small companies can easily post openings and reach potential candidates without complexity.",
+            "The platform emphasizes usability, clarity, and efficiency — creating a smooth experience for both sides of the hiring process.",
+            "Through this project, I aimed to build a solution that bridges the gap between talent and opportunity using technology.",
+            "Built with a clean interface and structured job management system, the platform focuses on simplicity, accessibility, and reducing the gap between talent and opportunity.",
+            "This project reflects my vision of creating a practical, transparent, and easy-to-use ecosystem where both job seekers and employers can benefit equally."
+        ],
         features: [
             "Job listing and filtering system",
             "Admin dashboard to manage jobs",
@@ -110,8 +114,13 @@ export const projects = [
             "Object-Oriented Programming"
         ],
 
-        problem:
+        Overview: [
             "Managing daily expenses manually is inefficient and lacks structured tracking and visualization.",
+            "This application provides a user-friendly interface to track expenses, categorize them, and generate visual reports.",
+            "The main page of the Expense Tracker provides a clear and user-friendly dashboard to manage daily income and expenses.",
+            "Users can easily add, edit, and delete expense entries, with the application automatically calculating monthly summaries and generating visual charts to help users understand their spending habits.",
+            "This project allowed me to apply my Python programming skills to create a practical tool for personal finance management, while also learning about GUI development, database integration, and application packaging."
+        ],
 
         features: [
             "Add, update and delete expense entries",

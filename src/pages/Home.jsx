@@ -1,8 +1,22 @@
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 
 function Home() {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash) {
+            const element = document.querySelector(location.hash);
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    }, [location]);
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -119,7 +133,7 @@ function Home() {
             </div>
 
             {/* PROJECTS */}
-            <div id="projects" className="py-24 px-6">
+            <div section id="projects" className="py-24 px-6">
                 <h2 className="text-4xl font-bold text-center mb-16">
                     My <span className="text-cyan-400">Projects</span>
                 </h2>
@@ -136,9 +150,9 @@ function Home() {
 
                         <Link
                             to="/projects/fresho-career"
-                            className="px-4 py-2 bg-cyan-400 text-black rounded-lg text-sm font-semibold"
+                            className="px-4 py-2 bg-cyan-400 align-middle text-black rounded-lg text-sm font-semibold"
                         >
-                            project overview 👁
+                            👁 project overview
                         </Link>
                     </div>
 

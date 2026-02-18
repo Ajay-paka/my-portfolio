@@ -1,10 +1,13 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { projects } from "../data/projects";
+import { useNavigate } from "react-router-dom";
+
 
 function CaseStudy() {
     const { slug } = useParams();
     const project = projects.find((p) => p.slug === slug);
+    const navigate = useNavigate();
 
     if (!project) {
         return <div className="p-20 text-center">Project Not Found</div>;
@@ -19,12 +22,14 @@ function CaseStudy() {
             className="min-h-screen bg-[#0f172a] text-white px-6 py-20"
         >
             {/* Back Button */}
-            <Link
-                to="/"
-                className="fixed top-6 left-6 bg-white/10 backdrop-blur px-4 py-2 rounded-lg text-sm hover:bg-cyan-400 hover:text-black transition"
-            >
+            <button onClick={() => navigate("/#projects")}
+                className="inline-flex items-center gap-2 px-4 py-2 mb-6 
+             bg-slate-800 hover:bg-slate-700 
+             text-slate-200 hover:text-white 
+             rounded-lg transition-all duration-300 
+             border border-slate-600">
                 ← Back
-            </Link>
+            </button>
 
             <div className="max-w-6xl mx-auto">
 
@@ -52,13 +57,13 @@ function CaseStudy() {
 
                 </div>
 
-                {/* Problem */}
+                {/* Overview */}
                 <div className="mb-16">
                     <h2 className="text-3xl font-semibold mb-4 text-cyan-400">
-                        The Problem
+                        Project Overview
                     </h2>
                     <p className="text-gray-400 leading-relaxed">
-                        {project.problem}
+                        {project.Overview ? project.Overview.join(" ") : "No overview available."}
                     </p>
                 </div>
 
