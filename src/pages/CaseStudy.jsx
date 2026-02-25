@@ -181,8 +181,8 @@ function CaseStudy() {
 
                                     {/* Caption Top (optional) */}
                                     {/* <p className="text-gray-400 text-sm">
-            {item.caption}
-          </p> */}
+                                    {item.caption}
+                                    </p> */}
 
                                     <img
                                         src={item.image}
@@ -204,7 +204,7 @@ function CaseStudy() {
                 {/* Metrics */}
                 {project.metrics && (
                     <div className="mb-20">
-                        <h2 className="text-4xl font-semibold mb-10 text-purple-400">
+                        <h2 className="text-4xl font-semibold mb-15 text-purple-400">
                             Project Metrics
                         </h2>
 
