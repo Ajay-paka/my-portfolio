@@ -172,6 +172,22 @@ function Home() {
                         </Link>
                     </div>
 
+                    <div className="bg-[#1e293b] p-6 rounded-2xl shadow-lg">
+                        <h3 className="text-2xl font-semibold mb-4 text-cyan-400">
+                            Fake Job Detector
+                        </h3>
+                        <p className="text-gray-400 mb-4">
+                            A full stack web application to detect and analyse fake job offers.
+                        </p>
+
+                        <Link
+                            to="/projects/fake-job-detector"
+                            className="px-4 py-2 bg-cyan-400 align-middle text-black rounded-lg text-sm font-semibold"
+                        >
+                            👁 project overview
+                        </Link>
+                    </div>
+
                 </div>
             </div>
 

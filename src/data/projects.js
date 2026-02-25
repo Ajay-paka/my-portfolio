@@ -195,4 +195,87 @@ export const projects = [
         github: "https://github.com/Ajay-paka/expense-tracker-desktop",
         App: "https://github.com/Ajay-paka/expense-tracker-desktop/releases"
     },
+
+    {
+        slug: "fake-job-detector",
+        title: "Fake Job Detector (Fraud Detection Web App)",
+        description:
+            "A full-stack web application that analyzes job descriptions and detects potential scam or fraudulent hiring patterns using a rule-based risk scoring engine.",
+
+        tech: [
+            "React.js",
+            "Flask",
+            "SQLite",
+            "Chart.js",
+            "REST API",
+            "Full Stack Development",
+            "Git & Deployment (Railway + Vercel)"
+        ],
+
+        Overview: [
+            "Online job scams and misleading hiring offers are increasing rapidly, especially targeting fresh graduates and job seekers.",
+            "This application analyzes job descriptions and identifies suspicious patterns using category-based risk detection.",
+            "The system classifies job posts into Low, Medium, or High risk based on strong scam indicators, psychological pressure tactics, and MLM-style language patterns.",
+            "The platform provides transparent detection by highlighting matched phrases that triggered risk scoring.",
+            "The project demonstrates full-stack integration, backend API design, database management, and live deployment."
+        ],
+
+        features: [
+            "Category-based fraud detection engine",
+            "Risk scoring (Low / Medium / High)",
+            "Explainable detection with matched phrase display",
+            "History tracking with database storage",
+            "Filter history by risk level",
+            "Delete individual scan records",
+            "Risk distribution analytics using charts",
+            "Live deployed backend and frontend"
+        ],
+
+        implementation: [
+            "Designed REST API using Flask",
+            "Implemented rule-based scoring logic with weighted categories",
+            "Integrated SQLite database for persistent history storage",
+            "Built responsive React frontend with reusable components",
+            "Integrated Chart.js for risk distribution analytics",
+            "Handled CORS and API integration between frontend and backend",
+            "Deployed backend on Railway and frontend on Vercel"
+        ],
+
+        challenges: [
+            "Designing balanced scoring logic without over-penalizing phrases",
+            "Managing CI/CD build errors during production deployment",
+            "Handling CORS issues between frontend and backend",
+            "Debugging deployment configuration for Railway and Vercel",
+            "Ensuring explainable detection instead of generic warnings"
+        ],
+
+        learned: [
+            "Full-stack architecture and API integration",
+            "Designing rule-based fraud detection logic",
+            "Deployment pipelines and environment configuration",
+            "Handling production build issues",
+            "Improving transparency in risk scoring systems"
+        ],
+
+        skills: [
+            "React.js",
+            "Flask",
+            "REST API Development",
+            "Database Integration",
+            "Fraud Detection Logic Design",
+            "Deployment & Debugging",
+            "Full Stack Development"
+        ],
+
+        metrics: [
+            { label: "Detection Categories", value: "3 (Strong / Pressure / MLM)" },
+            { label: "Risk Classification", value: "Low / Medium / High" },
+            { label: "Database Operations", value: "Create / Read / Delete" },
+            { label: "Deployment Status", value: "Live Full-Stack App" }
+        ],
+
+        github: "https://github.com/Ajay-paka/fake-job-frontend",
+        live: "https://fake-job-detector-one.vercel.app/.com",
+
+    }
 ];
