@@ -203,8 +203,8 @@ function CaseStudy() {
 
                 {/* Metrics */}
                 {project.metrics && (
-                    <div className="mb-20">
-                        <h2 className="text-4xl font-semibold mb-15 text-purple-400">
+                    <div className="mb-25">
+                        <h2 className="text-4xl font-semibold mb-10 text-purple-400">
                             Project Metrics
                         </h2>
 
