@@ -55,11 +55,12 @@ function Home() {
                         <span className="text-cyan-400 font-semibold">
                             <Typewriter
                                 words={[
-                                    "Software Developer",
-                                    "React Developer",
-                                    "Python Developer",
-                                    "Full Stack Enthusiast"
-                                ]}
+                                        "Software Developer",
+                                        "Java • Python • AI Applications",
+                                        "Backend Development",
+                                        "Exploring Cybersecurity & Secure Systems",
+                                        "Building Practical Software Products"
+                                    ]}
                                 loop
                                 cursor
                                 cursorStyle="|"
@@ -72,12 +73,12 @@ function Home() {
                     <div className="flex justify-center gap-6">
                         <a
                             href="#projects"
-                            className="bg-cyan-400 text-black px-6 py-3 rounded-full font-semibold hover:scale-110 transition"
+                            className="bg-cyan-500 text-black px-6 py-3 rounded-full font-semibold hover:scale-110 transition"
                         >
                             View My Work
                         </a>
 
-                        <a href="/Ajay_Resume.pdf" download className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-full font-semibold hover:bg-cyan-400 hover:text-black transition duration-300" >
+                        <a href="/Ajay_Resume.pdf" download className="border border-red-600 text-red-600 px-6 py-3 rounded-full font-semibold hover:bg-red-400 hover:text-black transition duration-300" >
                             Download Resume
                         </a>
                     </div>
@@ -91,10 +92,10 @@ function Home() {
                 </h2>
 
                 <div className="max-w-4xl mx-auto text-center text-gray-400 text-lg leading-relaxed">
-                    I am a passionate Software Developer focused on building modern,
-                    responsive, and scalable web applications using React and Python.
-                    I enjoy solving real-world problems and continuously improving my
-                    development skills through hands-on projects and deployments.
+                    I am a Software Developer focused on building practical applications using Java, 
+                    Python, React, and modern development tools. I enjoy solving real-world problems through backend systems,
+                    AI-powered projects, and scalable software solutions while continuously exploring cybersecurity fundamentals and secure software concepts.
+
                 </div>
             </div>
 
@@ -123,7 +124,7 @@ function Home() {
                         <h3 className="text-2xl font-semibold mb-6 text-purple-400">
                             Backend</h3>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                            {["Python", "REST APIs", "PostgreSQL"].map((skill, i) => (<div key={i}
+                            {["Python", "Java", "REST APIs", "SQL", "SQLite", "PostgreSQL"].map((skill, i) => (<div key={i}
                                 className="bg-[#1e293b] p-4 rounded-lg text-center hover:scale-105 hover:shadow-lg hover:shadow-[0_0_30px_#22d3ee] hover:shadow-purple-400/40 transition duration-300" >
                                 {skill} </div>))}
                         </div>
@@ -131,14 +132,35 @@ function Home() {
 
                 </div>
             </div>
+            <h3 className="text-2xl font-semibold text-center text-red-500">
+            Currently Exploring Cybersecurity, Kali Linux, and Secure Software Systems
+            </h3>
+
 
             {/* PROJECTS */}
             <div section id="projects" className="py-24 px-6">
                 <h2 className="text-4xl font-bold text-center mb-16">
                     My <span className="text-cyan-400">Projects</span>
                 </h2>
-
+               
                 <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+
+                    <div className="bg-[#1e293b] p-6 rounded-2xl shadow-lg">
+                        <h3 className="text-2xl font-semibold mb-4 text-red-500">
+                            Fake Job Detector
+                        </h3>
+                        <p className="text-gray-400 mb-4">
+                            A full stack web application for detecting suspicious job offers, with ongoing enhancements for AI-assisted analysis.
+                        </p>
+
+                        <Link
+                            to="/projects/fake-job-detector"
+                            className="px-4 py-2 bg-red-500 align-middle text-black rounded-lg text-sm font-semibold"
+                        >
+                            👁 project overview
+                        </Link>
+                    </div>
+
 
                     <div className="bg-[#1e293b] p-6 rounded-2xl shadow-lg">
                         <h3 className="text-2xl font-semibold mb-4 text-cyan-400">
@@ -172,22 +194,7 @@ function Home() {
                         </Link>
                     </div>
 
-                    <div className="bg-[#1e293b] p-6 rounded-2xl shadow-lg">
-                        <h3 className="text-2xl font-semibold mb-4 text-cyan-400">
-                            Fake Job Detector
-                        </h3>
-                        <p className="text-gray-400 mb-4">
-                            A full stack web application to detect and analyse fake job offers.
-                        </p>
-
-                        <Link
-                            to="/projects/fake-job-detector"
-                            className="px-4 py-2 bg-cyan-400 align-middle text-black rounded-lg text-sm font-semibold"
-                        >
-                            👁 project overview
-                        </Link>
-                    </div>
-
+                   
                 </div>
             </div>
 
@@ -199,7 +206,8 @@ function Home() {
 
                 <div className="max-w-3xl mx-auto bg-[#1e293b] p-10 rounded-2xl shadow-lg text-center">
                     <p className="text-gray-400 mb-6">
-                        I'm open to opportunities and collaborations.
+                        Open to software opportunities, practical collaborations, and product-focused development.
+
                     </p>
 
                     <div className="flex flex-col md:flex-row justify-center gap-6">
@@ -214,7 +222,7 @@ function Home() {
                         <a
                             href="https://github.com/Ajay-paka"
                             target="_blank"
-                            className="px-6 py-3 border border-cyan-400 text-cyan-400 rounded-lg"
+                            className="px-6 py-3 border border-red-500 text-red-500 rounded-lg"
                         >
                             GitHub
                         </a>
